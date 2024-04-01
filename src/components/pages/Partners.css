@@ -1,0 +1,50 @@
+/* 
+  
+  /* Alternatively, target specifically the partner section */
+  .container {
+    background-color: rgb(245, 245, 245); 
+   display: flex;
+  }
+  
+  /* Additional styling for visual improvement */
+  .customer-logos {
+    display: flex; /* Arrange logos horizontally */
+    justify-content: space-around; /* Distribute logos evenly */
+    gap: 1rem; /* Add spacing between logos */
+  }
+  
+  .slide img {
+    width: 100px; /* Adjust image width as needed */
+    border-radius: 40px; /* Add rounded corners */
+  }
+   /* Partners.css */
+
+/* Apply blue background to the entire page */
+
+  /* Styling for logo container and individual logos */
+  .customer-logos {
+    display: flex; /* Arrange logos horizontally */
+    justify-content: space-around; /* Distribute logos evenly */
+    gap: 10rem; /* Add spacing between logos */
+    overflow: hidden; /* Prevent logos from overflowing the container */
+    white-space: nowrap; /* Prevent wrapping of logos */
+    animation: slideFromRight 3s ease-in-out infinite; /* Apply animation */
+  }
+  
+  .slide img {
+    width: 100px; /* Adjust image width as needed */
+    border-radius: 5px; /* Add rounded corners */
+    animation: slide -10s ease-in-out infinite; /* Apply individual image animation */
+  }
+  
+  /* Animation definitions */
+  @keyframes slideFromRight {
+    from { transform: translateX(100%); } /* Start logos off-screen to the right */
+    to { transform: translateX(0); } /* Slide them to their positions */
+  }
+  
+  @keyframes slide {
+    0% { transform: translateX(100%); } /* Start each logo off-screen to the right */
+    100% { transform: translateX(-100%); } /* Slide them to the left, exceeding container width */
+  }
+  
